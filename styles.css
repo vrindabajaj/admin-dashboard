@@ -13,9 +13,14 @@
 body  {
     height: 100vh;
     display: grid;
-    grid-template-columns: 1fr 8fr;
-    grid-template-rows: 1fr 4fr;
+    grid-template-columns: 100px 8fr;
+    grid-template-rows: 175px auto;
+    transition: 150ms;
 }
+
+body:has(.sidebar:hover) {
+    grid-template-columns: 20% auto;
+  }
 
 .header {
     background-color: var(--header-colour);
