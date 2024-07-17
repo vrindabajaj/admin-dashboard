@@ -4,6 +4,12 @@
     padding: 0;
   }
 
+:root {
+    --sidebar-colour: #6c584c;
+    --header-colour: #a98467;
+    --dashboard-colour: #dde5b6;
+}
+
 body  {
     height: 100vh;
     display: grid;
@@ -12,15 +18,15 @@ body  {
 }
 
 .header {
-    background-color: #6c584c;
+    background-color: var(--header-colour);
     grid-column: 2 / 3;
 }
 
 .sidebar {
-    background-color: #a98467;
+    background-color: var(--sidebar-colour);
     grid-row: 1 / 3;
 }
 
 .dashboard {
-    background-color: #dde5b6;
+    background-color: var(--dashboard-colour);
 }
