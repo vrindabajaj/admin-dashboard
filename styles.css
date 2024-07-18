@@ -37,14 +37,16 @@ body:has(.sidebar:hover) {
 }
 
 .sidebar .logo{
-    margin: 25px 0px;
+    margin: 25px 0px 10px;
     color: white;
     font-size: 2em;
     display: flex;
     align-items: flex-end;
     overflow: hidden;
     gap: 10px;
-    white-space: nowrap;
+}
+.sidebar .logo img {
+    align-self: center;
 }
 
 .sidebar ul li {
