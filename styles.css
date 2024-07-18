@@ -8,9 +8,15 @@
     --sidebar-colour: #6c584c;
     --header-colour: #a98467;
     --dashboard-colour: #dde5b6;
+    --card-color: #fff8da;
 }
 
-body  {
+body {
+    display: grid;
+    grid-template-rows: min-content 1fr;
+}
+
+.container  {
     height: 100vh;
     display: grid;
     grid-template-columns: 100px 8fr;
@@ -18,7 +24,7 @@ body  {
     transition: 150ms;
 }
 
-body:has(.sidebar:hover) {
+.container:has(.sidebar:hover) {
     grid-template-columns: 300px auto;
   }
 
@@ -37,7 +43,7 @@ body:has(.sidebar:hover) {
 }
 
 .sidebar .logo{
-    margin: 25px 0px 10px;
+    margin: 10px 0px 15px;
     color: white;
     font-size: 2em;
     display: flex;
@@ -66,4 +72,38 @@ body:has(.sidebar:hover) {
 
 .dashboard {
     background-color: var(--dashboard-colour);
+    padding: 10px;
+    display: grid;
+    grid-template-columns: 4fr 300px;
+    grid-template-rows: 1fr;
+    gap: 10px;
+}
+
+.feed {
+    display: grid;
+    grid-template-rows: 50px 6fr 1fr 6fr;
+    gap: 10px;
+}
+
+.collection {
+    display: grid;
+    grid-template-rows: 50px auto;
+    gap: 10px;
+    min-height: 0;
+}
+
+.plants {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-rows: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 10px;
+}
+
+.your-collection {
+    grid-column: 1 / -1;
+}
+
+.card {
+    background-color: var(--card-color);
+    border-radius: 20px;
 }
