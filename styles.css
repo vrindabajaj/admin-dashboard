@@ -8,7 +8,9 @@
     --sidebar-colour: #6c584c;
     --header-colour: #a98467;
     --dashboard-colour: #dde5b6;
-    --card-color: #fff8da;
+    --card-color: #fcf8e0;
+    --accent-colour: #7c9634;
+    --dark-green: #4c6509;
 }
 
 body {
@@ -29,17 +31,23 @@ body {
   }
 
 .header {
+    position: sticky;
+    z-index: 1;
     background-color: var(--header-colour);
     grid-column: 2 / 3;
+    box-shadow: 0px 2px 4px 0px #683d1b;
 }
 
 .sidebar {
+    position: relative;
+    z-index: 1;
     grid-row: 1 / 3;
     background-color: var(--sidebar-colour);
     padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 30px;
+    box-shadow: 3px 0px 4px 0px #2a211ce3;
 }
 
 .sidebar .logo{
@@ -72,16 +80,16 @@ body {
 
 .dashboard {
     background-color: var(--dashboard-colour);
-    padding: 10px;
+    padding: 15px;
     display: grid;
     grid-template-columns: 4fr 300px;
     grid-template-rows: 1fr;
-    gap: 10px;
+    gap: 15px;
 }
 
 .feed {
     display: grid;
-    grid-template-rows: 50px 6fr 1fr 6fr;
+    grid-template-rows: auto 4fr auto 6fr;
     gap: 10px;
 }
 
@@ -96,14 +104,24 @@ body {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
     grid-template-rows: repeat(auto-fill, minmax(240px, 1fr));
-    gap: 10px;
+    gap: 15px;
 }
 
 .your-collection {
     grid-column: 1 / -1;
 }
 
+.title {
+    color: var(--dark-green);
+    font-size: 2em;
+}
+
 .card {
     background-color: var(--card-color);
     border-radius: 20px;
+    box-shadow: 2px 2px 5px 0px #8f95677d;
+}
+
+.plant {
+    border-left: 0.5em solid var(--accent-colour);
 }
