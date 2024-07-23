@@ -8,7 +8,7 @@
     --sidebar-colour: #6c584c;
     --header-colour: #a98467;
     --dashboard-colour: #dde5b6;
-    --card-color: #fcf8e0;
+    --card-colour: #fcf8e0;
     --accent-colour: #7c9634;
     --dark-green: #4c6509;
 }
@@ -31,11 +31,50 @@ body {
   }
 
 .header {
-    position: sticky;
     z-index: 1;
+    padding: 20px;
     background-color: var(--header-colour);
     grid-column: 2 / 3;
     box-shadow: 0px 2px 4px 0px #683d1b;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}
+
+.top, .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left, .right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.left {
+    margin-left: 40px;
+}
+
+.right{
+    margin-right: 40px;
+}
+
+.searchbar {
+    border-radius: 15px;
+    padding: 0 5px;
+    min-width: 40rem;
+    min-height: 2rem;
+    background-color: var(--card-colour);
+    border: none;
+}
+
+button {
+    padding: 10px 25px;
+    background-color: var(--sidebar-colour);
+    color: white;
+    border-radius: 20px;
+    border: none;
+    font-size: 1em;
 }
 
 .sidebar {
@@ -97,7 +136,6 @@ body {
     display: grid;
     grid-template-rows: 50px auto;
     gap: 10px;
-    min-height: 0;
 }
 
 .plants {
@@ -117,7 +155,7 @@ body {
 }
 
 .card {
-    background-color: var(--card-color);
+    background-color: var(--card-colour);
     border-radius: 20px;
     box-shadow: 2px 2px 5px 0px #8f95677d;
 }
