@@ -13,6 +13,7 @@
     --dark-green: #4c6509;
     --title-font: "Calistoga", serif;
     --primary-font: "Markazi Text", serif;
+    --secondary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 body {
@@ -46,6 +47,7 @@ body {
     display: grid;
     grid-template-rows: 1fr 1fr;
     color: white;
+    overflow-x: hidden;
 }
 
 .top, .bottom {
@@ -57,28 +59,35 @@ body {
     display: flex;
     gap: 10px;
     align-items: center;
+    min-width: 0;
 }
 
 .left {
-    margin-left: 40px;
+    margin-left: 30px;
+    margin-right: 20px;
 }
 
-.right{
-    margin-right: 40px;
+.right {
+    margin-right: 30px;
 }
 
 .searchbar {
     border-radius: 15px;
     padding: 0 5px;
-    min-width: 40rem;
+    width: 40rem;
     min-height: 2rem;
     background-color: var(--card-colour);
     border: none;
 }
 
+.username {
+    font-size: 2rem;
+}
+
 button {
     padding: 10px 25px;
     background-color: var(--sidebar-colour);
+    font-family: var(--secondary-font);
     color: white;
     border-radius: 20px;
     border: none;
@@ -129,7 +138,7 @@ button {
 
 .dashboard {
     background-color: var(--dashboard-colour);
-    padding: 25px;
+    padding: 20px;
     display: grid;
     grid-template-columns: 4fr 300px;
     grid-template-rows: 1fr;
@@ -149,14 +158,14 @@ button {
 }
 
 .plants {
+    padding: 5px;
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    grid-template-rows: repeat(auto-fill, minmax(240px, 1fr));
+    grid-template-rows: repeat(auto-fill, 300px);
+    grid-auto-rows: 300px;
     gap: 15px;
-}
-
-.your-collection {
-    grid-column: 1 / -1;
+    max-height: 75vh;
+    overflow-y: auto;
 }
 
 .section-title {
@@ -171,4 +180,46 @@ button {
 
 .plant {
     border-left: 0.5em solid var(--accent-colour);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+}
+
+.info img {
+    height: 130px;
+    width: 130px; 
+    margin: 10px 0;
+}
+
+.icons {
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    align-self: end;
+}
+
+.icons img {
+    height: 30px;
+    width: 30px;
+}
+
+.plant-name {
+    font-family: var(--primary-font);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+.sci-name {
+    font-family: var(--secondary-font);
+    font-style: italic;
+    text-align: center;
+    color: var(--sidebar-colour);
 }
