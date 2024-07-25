@@ -204,7 +204,7 @@ button:active {
     grid-template-rows: repeat(auto-fill, 300px);
     grid-auto-rows: 300px;
     gap: 15px;
-    max-height: 90vh;
+    max-height: 80vh;
     overflow-y: auto;
 }
 
@@ -273,8 +273,8 @@ button:active {
 }
 
 .feed {
-    display: grid;
-    grid-template-rows: auto 1fr auto 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 10px;
 }
 
