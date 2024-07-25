@@ -11,9 +11,28 @@
     --card-colour: #fcf8e0;
     --accent-colour: #7c9634;
     --dark-green: #4c6509;
+    --white: #ffffff;
     --title-font: "Calistoga", serif;
     --primary-font: "Markazi Text", serif;
     --secondary-font: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+::-webkit-scrollbar {
+    width: 8px; 
+}
+
+::-webkit-scrollbar-track {
+    border-radius: 5px;
+    background: var(--header-colour) ;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background: var(--card-colour);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-colour);
 }
 
 body {
@@ -46,7 +65,7 @@ body {
     box-shadow: 0px 2px 4px 0px #683d1b;
     display: grid;
     grid-template-rows: 1fr 1fr;
-    color: white;
+    color: var(--white);
     overflow-x: hidden;
 }
 
@@ -88,7 +107,7 @@ button {
     padding: 10px 25px;
     background-color: var(--sidebar-colour);
     font-family: var(--secondary-font);
-    color: white;
+    color: var(--white);
     border-radius: 20px;
     border: none;
     font-size: 1em;
@@ -108,7 +127,7 @@ button {
 
 .sidebar .logo{
     margin: 15px 0px 15px;
-    color: white;
+    color: var(--white);
     font-family: var(--title-font);
     font-size: 2.3em;
     width: 270px;
@@ -124,7 +143,7 @@ button {
 .sidebar ul li {
     margin-bottom: 10px;
     list-style-type: none;
-    color: white;
+    color: var(--white);
     font-family: var(--primary-font);
     font-size: 2em;
     display: flex;
