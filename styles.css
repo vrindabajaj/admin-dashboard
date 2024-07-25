@@ -23,16 +23,16 @@
 
 ::-webkit-scrollbar-track {
     border-radius: 5px;
-    background: var(--header-colour) ;
+    background: var(--card-colour) ;
 }
 
 ::-webkit-scrollbar-thumb {
     border-radius: 5px;
-    background: var(--card-colour);
+    background: rgb(149, 161, 123) ;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--accent-colour);
+    background: var(--dark-green);
 }
 
 body {
