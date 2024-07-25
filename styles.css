@@ -90,12 +90,21 @@ body {
     margin-right: 30px;
 }
 
+#bell:hover {
+    background-color: #683c1b8e;
+    box-sizing: content-box;
+    padding:10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
 .searchbar {
     border-radius: 15px;
     padding: 0 5px;
     width: 40rem;
     min-height: 2rem;
     background-color: var(--card-colour);
+    font-size: 1.5em;
     border: none;
 }
 
@@ -111,6 +120,15 @@ button {
     border-radius: 20px;
     border: none;
     font-size: 1em;
+}
+
+button:hover {
+    background-color: #2a211ce3;
+    cursor: pointer;
+}
+
+button:active {
+    text-decoration: underline;
 }
 
 .sidebar {
@@ -148,6 +166,15 @@ button {
     font-size: 2em;
     display: flex;
     overflow: hidden;
+}
+
+.sidebar ul li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.sidebar ul li:active {
+    font-weight: bold;
 }
 
 .sidebar .icon {
@@ -199,6 +226,10 @@ button {
     justify-content: space-between;
 }
 
+.plant:hover {
+    transform: translate(-3px, -3px);
+}
+
 .info {
     display: flex;
     flex-direction: column;
@@ -222,6 +253,10 @@ button {
 .icons img {
     height: 30px;
     width: 30px;
+}
+
+.icons img:hover {
+    cursor: pointer;
 }
 
 .plant-name {
@@ -260,6 +295,11 @@ button {
     font-family: var(--secondary-font);
     text-overflow: ellipsis;
     font-size: 1em;
+}
+
+.announcement:hover, .title:hover {
+    background-color: #cadf9284;
+    cursor: pointer;
 }
 
 .line {
